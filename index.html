@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0%;
+            padding: 0px;
+        }
+
+        .container {
+            width: 100%;
+              height: 100%;
+        }
+
+        .container .navbar {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.6rem;
+            margin: auto;
+            padding: 3rem;
+            background-color: transparent;
+        }
+
+        .container .navbar .name {
+            padding: 16px;
+            font-weight: 800;
+        }
+
+        .container .navbar .name:hover {
+            opacity: 0.5;
+            cursor: pointer;
+            transition: 1s;
+            content: "";
+        }
+
+        .container .navbar .name:hover::after {
+            content: "";
+            background-color: black;
+            display: block;
+            width: auto;
+            height: 3px;
+            transition: 1s;
+        }
+
+        .container .navbar .listmenu ul {
+            display: flex;
+            list-style: none;
+            flex-direction: row;
+
+        }
+
+        .container .navbar .listmenu ul li {
+            padding: 16px;
+
+        }
+
+        .container .navbar .listmenu ul li:hover {
+            opacity: 0.5;
+            cursor: pointer;
+            transition: 1s;
+            content: "";
+
+        }
+
+        .container .navbar .listmenu ul li:hover::after {
+            content: "";
+            background-color: black;
+            display: block;
+            width: auto;
+            height: 3px;
+            transition: 1s;
+
+        }
+
+        .banner {
+            margin: auto;
+            padding: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+
+        }
+
+        .avatar {
+            width: 20%;
+            height: 50%;
+            padding: 16px;
+        }
+
+        .banner .infor {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 3rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .banner .infor .hello {
+            opacity: 0.8;
+            font-size: large;
+        }
+
+        .banner .infor .name-infor {
+            font-size: 50px;
+            font-weight: 600;
+        }
+
+        .banner .infor .position {
+            opacity: 0.8;
+            font-size: xx-large;
+        }
+
+        .banner .infor p,
+        .function .cv-download {
+            padding: 0px 16px;
+        }
+
+        .banner .infor .function .cv-download {
+            border: 1px solid;
+            border-radius: 15px;
+            padding: 8px 16px;
+            margin: 8px 8px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .banner .infor .function {
+            display: flex;
+            justify-content: start;
+            padding: 4px;
+        }
+
+        .banner .infor .function .cv-download:hover {
+            background-color: black;
+            color: white;
+            transition: 1s;
+        }
+
+        .banner .infor .my-social {
+            padding: 4px 16px;
+        }
+
+        .banner .infor .my-social a {
+            font-size: 30px;
+            padding: 8px 8px;
+            color: black;
+        }
+
+        .about-me .title {
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+
+        .about-me {
+            margin: auto;
+            padding: auto;
+        }
+
+        .about-me .title h1 {
+            font-size: 40px;
+        }
+
+        .about-me .title p {
+            opacity: 0.8;
+        }
+
+        .main-infor {
+            margin: 50px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-infor .avatar-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25%;
+            height: 50%;
+            padding: 1rem;
+        }
+
+        .main-infor .avatar-main img {
+            width: 100%;
+            height: 100%;
+            border-radius: 60px;
+        }
+
+        .form {
+            display: flex;
+            width: 100%;
+            height: auto;
+        }
+
+        .statament {
+            display: flex;
+            margin: 2rem;
+            flex-direction: column;
+        }
+
+        .form .experience,
+        .education {
+            margin: 8px;
+            width: 50%;
+            border-radius: 20px;
+            border: 1px solid;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .form .experience p,
+        .education p {
+            opacity: 0.7;
+        }
+
+        .form .education:hover {
+            background-color: black;
+            color: white;
+            transition: 1s;
+        }
+
+        .form .experience:hover {
+            background-color: black;
+            color: white;
+            transition: 1s;
+        }
+        .statament{
+            width: 30%;
+            height: auto;
+        }
+        .statament .attic {
+            margin: 8PX;
+            width: 100%;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .experience-main .title {
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .experience-main .title p {
+            opacity: 0.8;
+        }
+
+        .experience-main .title h3 {
+            font-size: 30px;
+        }
+
+        .experience-main .main {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .experience-main .main .fe,
+        .be {
+            display: flex;
+            flex-direction: column;
+            border-radius: 60px;
+            border: 1px solid;
+            width: 30%;
+            height: auto;
+            padding: 2rem;
+            margin: 16px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .experience-main .main .fe,
+        .be .title h3 {
+            text-align: center;
+            color: gray;
+
+        }
+
+        .source .items {
+            display: flex;
+            padding: 0 3rem;
+            margin: 1.5rem;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        .source .items h3,
+        i {
+            color: black;
+            margin: 2px;
+            font-size: larger;
+
+        }
+
+        .source .items p {
+            color: gray;
+        }
+
+        .source .items .logo,
+        .content {
+            margin: 4px;
+        }
+
+        .project-section .title {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+        }
+
+        .project-section .projects {
+            margin: 50px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .project-section .projects .first,
+        .second {
+            border-radius: 60px;
+            border: 1px solid;
+            padding: 1.5rem;
+            margin: 1.5rem;
+            width: 20%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            font-size: 20px;
+        }
+
+
+        .project-section .projects .first img,
+        .second img {
+            border-radius: 40px;
+            width: 100%;
+            height: 70%;
+        }
+
+        .project-section .projects .first img,
+        .second img,
+        .first h1,
+        .second h1,
+        .first a,
+        .second a {
+            margin: auto;
+            padding: auto;
+        }
+
+        .project-section .projects .first a,
+        .second a {
+            text-decoration: none;
+            border-radius: 30px;
+            color: black;
+            border: 1px solid;
+            cursor: pointer;
+            padding: 12px 3rem;
+        }
+
+        .project-section .projects .first a:hover,
+        .second a:hover {
+            background-color: black;
+            color: white;
+            transition: 1s;
+        }
+
+        .contact .title {
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .mail a {
+            margin: 30px;
+            color: black;
+            text-decoration: none;
+            border: 1px solid;
+            border-radius: 15px;
+            padding: 1rem;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .mail {
+            margin-top: 1%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .menu-end .list {
+            margin-top: 10%;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .menu-end .list li {
+            padding: 2rem;
+        }
+
+        .menu-end .list li:hover {
+            opacity: 0.5;
+            cursor: pointer;
+            transition: 1s;
+            content: "";
+
+        }
+
+        .menu-end .list li:hover::after {
+            content: "";
+            background-color: black;
+            display: block;
+            width: auto;
+            height: 3px;
+            transition: 1s;
+
+        }
+
+        .end {
+            margin: 50px;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 25px;
+            color: gray;
+        }
+        .title h1{
+            font-size: 70px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        @media screen and (max-width: 1024px) and (min-width: 768px) {
+            .container   .banner{
+                flex-direction: column;
+                align-items: center;
+            }
+            .banner .infor,.function{
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+            }
+            .main-infor{
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .avatar{
+                width: 30%;
+            }
+            .main-infor .avatar-main{
+                width: 40%;
+            }
+            .statament {
+             height: auto;
+             width: 100%;
+            }
+            .experience-main .main{
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .experience-main .main .fe, .be {
+                width:70% ;
+            }
+            .project-section .projects {
+                align-items: center;
+                flex-direction: column;
+            }
+            .project-section .projects .first,
+        .second{
+            width: 60%;
+        }
+    }
+        @media screen and (max-width: 767px){
+            .navbar{
+                display: none;
+            }
+            .container .navbar .listmenu ul li{
+                display: none;
+            }
+            .container .navbar .name{
+                display: none;
+            }
+            .container   .banner{
+                flex-direction: column;
+                align-items: center;
+            }
+            .banner .infor,.function{
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                margin: 0;
+            }
+            .main-infor{
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .avatar{
+                width: 30%;
+            }
+            .main-infor .avatar-main{
+                width: 40%;
+            }
+            .statament {
+             height: auto;
+             width: 100%;
+            }
+            .experience-main .main{
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .experience-main .main .fe, .be {
+                width: 70%;
+            }
+            .project-section .projects {
+                align-items: center;
+                flex-direction: column;
+            }
+            .project-section .projects .first,
+        .second{
+            width: 100%;
+            height: 400px;
+        }
+        .form{
+            flex-direction: column;
+        }.form .experience, .education{
+            width: auto;
+        }
+        .source .items{
+            margin: 0px;
+            padding: 0px;
+        }
+        .title h1{
+            font-size: 50px;
+        }
+        h2{
+            font-size: 20px;
+        }
+        .menu-end .list{
+            display: inline;
+        }
+        .menu-end .list li{
+            width: 100%;
+        }
+        .end{
+            font-size: 20px;
+        }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="name">
+                <p>Martin Pham</p>
+            </div>
+            <div class="listmenu">
+                <ul>
+                    <li><a href="#aboutme">About</a></li>
+                    <li><a href="#Experience">Experience</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="avatar">
+                <img
+                    src="https://scontent.fdad1-4.fna.fbcdn.net/v/t39.30808-6/315693514_3529463213999043_2536304268511105090_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=fBbUwsXsWhsAX_j_t33&_nc_ht=scontent.fdad1-4.fna&oh=00_AfCCLbGmEfmXDW_mkuGbgJarFaVVvoq4pN8BhV_cnKb4Sg&oe=650E0B73">
+            </div>
+            <div class="infor">
+                <p class="hello">Hello, I'm</p>
+                <h1 class="name-infor">Martin Pham</h1>
+                <p class="position">Full-stack devoloper</p>
+                <div class="function">
+                    <a href="https://github.com/phamnguyentruongtin/resume.github.io/blob/main/index.html" class="cv-download">Download cv</a>
+                    <a href="tel:+84799144145" class="cv-download">Contact</a>
+                </div>
+                <div class="my-social">
+                    <a href="https://github.com/phamnguyentruongtin"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/long.tins/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/truongtin2003"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div id="aboutme" class="about-me">
+            <div class="title">
+                <p>Get To Know More</p>
+                <h1>About Me</h1>
+            </div>
+            <div class="main-infor">
+                <div class="avatar-main">
+                    <img
+                        src="https://scontent.fdad1-4.fna.fbcdn.net/v/t1.6435-9/120956712_2895758480702856_3733749651576110988_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=r_GMnqxYhwYAX_TrQ5X&_nc_ht=scontent.fdad1-4.fna&oh=00_AfAOOV6bD2G2609NNrlNmsoVbcYan7Z_SGQM3DSAMi0obg&oe=65310739">
+                </div>
+                <div class="statament">
+                    <div class="form">
+                        <div class="experience">
+                            <i class="fa-solid fa-land-mine-on"></i>
+                            <h4>Experience</h4>
+                            <p>NoSQl and SQl</p>
+                            <p>Write APIs</p>
+                            <p>Use APIs</p>
+                        </div>
+                        <div class="education">
+                            <i class="fa-solid fa-school"></i>
+                            <h4>Education</h4>
+                            <p>Codegym Java fullstack Degree</p>
+                            <p>Senior student of Duy Tan University</p>
+                            <p>GPA: 3.0</p>
+                        </div>
+                    </div>
+                    <div class="attic">
+                        <p>Hi guys my name is Matin Pham and im looking for a
+                            job internship,im a senior student of Duy Tan University,
+                            i had experienced with Java,TypeScript,Js,css,html,SQl and some framework of that,It's
+                            spring boot,hibernate,spring data jpa,...
+                            and some technique in front end,it't is angular framework ... .In this time,
+                            im studying nestJS framework of TypeScript, i love to learn everything
+                            in this life,i don't think im a smarter.However, I'm ready to overtime,and work so hard ,
+                            if your company need that.In addition,I'm a funny guy,i love communicate with colleague,
+                            i'm so Appreciate you to read it paragraph and i'm so excited if i have a opportunity to
+                            join your company,
+                            if in this paragraph has any issue,i hope you forgive this,hope you have a good time better.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Experience" class="experience-main">
+            <div class="title">
+                <p>Explore My</p>
+                <h1>Experience</h1>
+            </div>
+            <div class="main">
+                <div class="fe">
+                    <div class="title">
+                        <h3>Frontend Devolopment</h3>
+                    </div>
+                    <div class="source">
+                        <div class="items">
+                            <div class="left">
+                                <div class="logo">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>Bootstrap</h3>
+                                    <p>intermediate</p>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="logo">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>CSS</h3>
+                                    <p>intermediate</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="left">
+                                <div class="logo">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>TypeScript</h3>
+                                    <p>Experienced</p>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="logo">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>HTML</h3>
+                                    <p>intermediate</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="items">
+                            <div class="left">
+                                <div class="logo">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>JavaScript</h3>
+                                    <p>intermediate</p>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="logo">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>Angular</h3>
+                                    <p>intermediate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="be">
+                    <div class="title">
+                        <h3>Backend Devolopment</h3>
+                    </div>
+                    <div class="source">
+                        <div class="items">
+                            <div class="left">
+                                <div class="logo">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>Java</h3>
+                                    <p>intermediate</p>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="logo">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>SQL,NoSQL</h3>
+                                    <p>Experienced</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="left">
+                                <div class="logo">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>Git</h3>
+                                    <p>intermediate</p>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="logo">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>Spring boot</h3>
+                                    <p>intermediate</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="left">
+                                <div class="logo">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>NestJS</h3>
+                                    <p>intermediate</p>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="logo">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="content">
+                                    <h3>JSP-Servlet</h3>
+                                    <p>intermediate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="project" class="project-section">
+            <div class="title">
+                <p style="opacity: 0.8;">Browse My Recent</p>
+                <h1 style="font-size: 70px;">Projects</h1>
+            </div>
+            <div class="projects">
+                <div class="first">
+                    <img src="https://avatars.githubusercontent.com/u/132463971?s=200&v=4">
+                    <h2>Pawn App</h2>
+                    <a href="https://github.com/A0522I1-Org">GitHub</a>
+                </div>
+                <div class="second">
+                    <img src="https://i.pinimg.com/564x/8c/d8/e0/8cd8e0df053d9cd79c14cbb7facc793b.jpg">
+                    <h2>Medical App</h2>
+                    <a href="https://github.com/A0722i1-Org">GitHub</a>
+                </div>
+            </div>
+        </div>
+        <div id="contact" class="contact">
+            <div class="title">
+                <p style="opacity: 0.8;">Get In Touch</p>
+                <h1>Contact Me</h1>
+            </div>
+            <div class="mail">
+
+                <a href="mailto:truongtin1206@gmail.com"> <i class="fa-solid fa-envelope"></i>
+                    truongtin1206@gmail.com</a>
+            </div>
+            <div class="menu-end">
+                <ul class="list">
+                    <li><a href="#aboutme">About</a></li>
+                    <li><a href="#Experience">Experience</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="end">
+                Copyright © 2023 Martin Pham.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
