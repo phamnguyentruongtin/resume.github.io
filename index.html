@@ -21,16 +21,19 @@
 
         .container .navbar {
             display: flex;
-            justify-content: space-between;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-size: 1.6rem;
             margin: auto;
-            padding: 3rem;
-            background-color: transparent;
+            padding: auto;
+            position: fixed;
+            background-color: white;
+            top: 0; /* Position the navbar at the top of the page */
+            width: 100%; /* Full width */
         }
 
         .container .navbar .name {
             padding: 16px;
+            position: relative;
             font-weight: 800;
         }
 
@@ -54,11 +57,13 @@
             display: flex;
             list-style: none;
             flex-direction: row;
+            position: relative;
 
         }
 
         .container .navbar .listmenu ul li {
             padding: 16px;
+            position: relative;
 
         }
 
@@ -82,6 +87,7 @@
 
         .banner {
             margin: auto;
+            margin-top: 10rem;
             padding: auto;
             display: flex;
             justify-content: center;
@@ -110,7 +116,7 @@
         }
 
         .banner .infor .hello {
-            opacity: 0.8;
+           color:gray;
             font-size: large;
         }
 
@@ -120,7 +126,7 @@
         }
 
         .banner .infor .position {
-            opacity: 0.8;
+            color:gray;
             font-size: xx-large;
         }
 
@@ -176,7 +182,7 @@
         }
 
         .about-me .title p {
-            opacity: 0.8;
+            color:gray;
         }
 
         .main-infor {
@@ -227,7 +233,7 @@
 
         .form .experience p,
         .education p {
-            opacity: 0.7;
+            color:gray;
         }
 
         .form .education:hover {
@@ -257,7 +263,7 @@
         }
 
         .experience-main .title p {
-            opacity: 0.8;
+            color:gray;
         }
 
         .experience-main .title h3 {
@@ -588,7 +594,7 @@
         <div class="banner">
             <div class="avatar">
                 <img
-                    src="https://scontent.fdad1-4.fna.fbcdn.net/v/t39.30808-6/315693514_3529463213999043_2536304268511105090_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=fBbUwsXsWhsAX_j_t33&_nc_ht=scontent.fdad1-4.fna&oh=00_AfCCLbGmEfmXDW_mkuGbgJarFaVVvoq4pN8BhV_cnKb4Sg&oe=650E0B73">
+                loading="lazy" src="https://scontent.fdad1-4.fna.fbcdn.net/v/t39.30808-6/315693514_3529463213999043_2536304268511105090_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=fBbUwsXsWhsAX_j_t33&_nc_ht=scontent.fdad1-4.fna&oh=00_AfCCLbGmEfmXDW_mkuGbgJarFaVVvoq4pN8BhV_cnKb4Sg&oe=650E0B73">
             </div>
             <div class="infor">
                 <p class="hello">Hello, I'm</p>
@@ -613,7 +619,7 @@
             <div class="main-infor">
                 <div class="avatar-main">
                     <img
-                        src="https://scontent.fdad1-4.fna.fbcdn.net/v/t1.6435-9/120956712_2895758480702856_3733749651576110988_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=r_GMnqxYhwYAX_TrQ5X&_nc_ht=scontent.fdad1-4.fna&oh=00_AfAOOV6bD2G2609NNrlNmsoVbcYan7Z_SGQM3DSAMi0obg&oe=65310739">
+                        src="https://scontent.fdad1-4.fna.fbcdn.net/v/t1.6435-9/120956712_2895758480702856_3733749651576110988_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=r_GMnqxYhwYAX_TrQ5X&_nc_ht=scontent.fdad1-4.fna&oh=00_AfAOOV6bD2G2609NNrlNmsoVbcYan7Z_SGQM3DSAMi0obg&oe=65310739" loading="lazy">
                 </div>
                 <div class="statament">
                     <div class="form">
@@ -794,17 +800,17 @@
         </div>
         <div id="project" class="project-section">
             <div class="title">
-                <p style="opacity: 0.8;">Browse My Recent</p>
+                <p style="color: gray;">Browse My Recent</p>
                 <h1 style="font-size: 70px;">Projects</h1>
             </div>
             <div class="projects">
                 <div class="first">
-                    <img src="https://avatars.githubusercontent.com/u/132463971?s=200&v=4">
+                    <img src="https://avatars.githubusercontent.com/u/132463971?s=200&v=4" loading="lazy">
                     <h2>Pawn App</h2>
                     <a href="https://github.com/A0522I1-Org">GitHub</a>
                 </div>
                 <div class="second">
-                    <img src="https://i.pinimg.com/564x/8c/d8/e0/8cd8e0df053d9cd79c14cbb7facc793b.jpg">
+                    <img src="https://i.pinimg.com/564x/8c/d8/e0/8cd8e0df053d9cd79c14cbb7facc793b.jpg" loading="lazy">
                     <h2>Medical App</h2>
                     <a href="https://github.com/A0722i1-Org">GitHub</a>
                 </div>
@@ -812,7 +818,7 @@
         </div>
         <div id="contact" class="contact">
             <div class="title">
-                <p style="opacity: 0.8;">Get In Touch</p>
+                <p style="color: gray;">Get In Touch</p>
                 <h1>Contact Me</h1>
             </div>
             <div class="mail">
