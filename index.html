@@ -16,7 +16,7 @@
 
         .container {
             width: 100%;
-              height: 100%;
+            height: 100%;
         }
 
         .container .navbar {
@@ -27,8 +27,12 @@
             padding: auto;
             position: fixed;
             background-color: white;
-            top: 0; /* Position the navbar at the top of the page */
-            width: 100%; /* Full width */
+            justify-content: space-between;
+            align-items: center;
+            top: 0;
+            /* Position the navbar at the top of the page */
+            width: 100%;
+            /* Full width */
         }
 
         .container .navbar .name {
@@ -67,7 +71,7 @@
 
         }
 
-        .container .navbar .listmenu ul li:hover {
+        .container .navbar .listmenu ul .list:hover {
             opacity: 0.5;
             cursor: pointer;
             transition: 1s;
@@ -116,7 +120,7 @@
         }
 
         .banner .infor .hello {
-           color:gray;
+            color: gray;
             font-size: large;
         }
 
@@ -126,7 +130,7 @@
         }
 
         .banner .infor .position {
-            color:gray;
+            color: gray;
             font-size: xx-large;
         }
 
@@ -182,7 +186,7 @@
         }
 
         .about-me .title p {
-            color:gray;
+            color: gray;
         }
 
         .main-infor {
@@ -233,7 +237,7 @@
 
         .form .experience p,
         .education p {
-            color:gray;
+            color: gray;
         }
 
         .form .education:hover {
@@ -247,10 +251,12 @@
             color: white;
             transition: 1s;
         }
-        .statament{
+
+        .statament {
             width: 30%;
             height: auto;
         }
+
         .statament .attic {
             margin: 8PX;
             width: 100%;
@@ -263,7 +269,7 @@
         }
 
         .experience-main .title p {
-            color:gray;
+            color: gray;
         }
 
         .experience-main .title h3 {
@@ -444,7 +450,8 @@
             font-size: 25px;
             color: gray;
         }
-        .title h1{
+
+        .title h1 {
             font-size: 70px;
         }
 
@@ -452,128 +459,214 @@
             text-decoration: none;
             color: black;
         }
+
         @media screen and (max-width: 1024px) and (min-width: 768px) {
-            .container   .banner{
+            
+            .container .banner {
                 flex-direction: column;
                 align-items: center;
             }
-            .banner .infor,.function{
+
+            .banner .infor,
+            .function {
                 text-align: center;
                 align-items: center;
                 justify-content: center;
             }
-            .main-infor{
+
+            .main-infor {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
             }
-            .avatar{
+
+            .avatar {
                 width: 30%;
             }
-            .main-infor .avatar-main{
+
+            .main-infor .avatar-main {
                 width: 40%;
             }
+
             .statament {
-             height: auto;
-             width: 100%;
+                height: auto;
+                width: 100%;
             }
-            .experience-main .main{
+
+            .experience-main .main {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
             }
-            .experience-main .main .fe, .be {
-                width:70% ;
+
+            .experience-main .main .fe,
+            .be {
+                width: 70%;
             }
+
             .project-section .projects {
                 align-items: center;
                 flex-direction: column;
             }
+
             .project-section .projects .first,
-        .second{
-            width: 60%;
+            .second {
+                width: 60%;
+            }
+            .navbar {
+                display: none;
+            }
+
+            .container .navbar .listmenu ul li {
+                display: none;
+            }
+
+            .container .navbar .name {
+                display: none;
+            }
         }
-    }
-        @media screen and (max-width: 767px){
-            .navbar{
+
+        @media screen and (max-width: 767px) {
+            .navbar {
                 display: none;
             }
-            .container .navbar .listmenu ul li{
+
+            .container .navbar .listmenu ul li {
                 display: none;
             }
-            .container .navbar .name{
+
+            .container .navbar .name {
                 display: none;
             }
-            .container   .banner{
+
+            .container .banner {
                 flex-direction: column;
                 align-items: center;
             }
-            .banner .infor,.function{
+
+            .banner .infor,
+            .function {
                 text-align: center;
                 align-items: center;
                 justify-content: center;
                 padding: 0;
                 margin: 0;
             }
-            .main-infor{
+
+            .main-infor {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
             }
-            .avatar{
+
+            .avatar {
                 width: 30%;
             }
-            .main-infor .avatar-main{
+
+            .main-infor .avatar-main {
                 width: 40%;
             }
+
             .statament {
-             height: auto;
-             width: 100%;
+                height: auto;
+                width: 100%;
             }
-            .experience-main .main{
+
+            .experience-main .main {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
             }
-            .experience-main .main .fe, .be {
+
+            .experience-main .main .fe,
+            .be {
                 width: 70%;
             }
+
             .project-section .projects {
                 align-items: center;
                 flex-direction: column;
             }
+
             .project-section .projects .first,
-        .second{
-            width: 100%;
-            height: 400px;
+            .second {
+                width: 100%;
+                height: 400px;
+            }
+
+            .form {
+                flex-direction: column;
+            }
+
+            .form .experience,
+            .education {
+                width: auto;
+            }
+
+            .source .items {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            .title h1 {
+                font-size: 50px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .menu-end .list {
+                display: inline;
+            }
+
+            .menu-end .list li {
+                width: 100%;
+            }
+
+            .end {
+                font-size: 20px;
+            }
         }
-        .form{
-            flex-direction: column;
-        }.form .experience, .education{
-            width: auto;
+        #my-checkbox{
+            display: none;
         }
-        .source .items{
-            margin: 0px;
-            padding: 0px;
+        .paragraph1{
+            display: block;
         }
-        .title h1{
-            font-size: 50px;
-        }
-        h2{
-            font-size: 20px;
-        }
-        .menu-end .list{
-            display: inline;
-        }
-        .menu-end .list li{
-            width: 100%;
-        }
-        .end{
-            font-size: 20px;
-        }
-        }
-        
+
     </style>
+    <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            const checkbox = document.querySelector('#my-checkbox');
+            const allElements = document.querySelectorAll('*');
+            const switchs = document.querySelectorAll("switch")
+
+            checkbox.addEventListener('click', () => {
+                if (checkbox.checked) {
+                    allElements.forEach((domElement) => {
+                        domElement.style.backgroundColor = 'black';
+                        domElement.style.color = 'white';
+                        domElement.style.transition= "2s";
+                        switchs.forEach((dom)=>{
+                            dom.style.style.backgroundColor = 'white';
+                            dom.style.style.color = 'white';
+                        })
+                    });
+                } else {
+                    allElements.forEach((domElement) => {
+                        domElement.style.backgroundColor = 'white';
+                        domElement.style.color = 'black';
+                        domElement.style.transition= "2s";
+                        switchs.forEach((dom)=>{
+                            dom.style.style.backgroundColor = 'white';
+                            dom.style.style.color = 'white';
+                        })
+                    });
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -584,24 +677,33 @@
             </div>
             <div class="listmenu">
                 <ul>
-                    <li><a href="#aboutme">About</a></li>
-                    <li><a href="#Experience">Experience</a></li>
-                    <li><a href="#project">Project</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li class="list"><a href="#aboutme">About</a></li>
+                    <li class="list"><a href="#Experience">Experience</a></li>
+                    <li class="list"><a href="#project">Project</a></li>
+                    <li class="list"><a href="#contact">Contact</a></li>
+                    <li>
+                        <form><label class="switch">
+                                <input name="my-checkbox" id="my-checkbox" type="checkbox">
+                                <p class="paragraph1">DarkMode</p>
+                            </label>
+                        </form>
+                    </li>
+
                 </ul>
             </div>
         </div>
         <div class="banner">
             <div class="avatar">
-                <img
-                loading="lazy" src="https://scontent.fdad1-4.fna.fbcdn.net/v/t39.30808-6/315693514_3529463213999043_2536304268511105090_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=fBbUwsXsWhsAX_j_t33&_nc_ht=scontent.fdad1-4.fna&oh=00_AfCCLbGmEfmXDW_mkuGbgJarFaVVvoq4pN8BhV_cnKb4Sg&oe=650E0B73">
+                <img loading="lazy"
+                    src="https://scontent.fdad1-4.fna.fbcdn.net/v/t39.30808-6/315693514_3529463213999043_2536304268511105090_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=Rsu8h38q87cAX-NRfzZ&_nc_ht=scontent.fdad1-4.fna&oh=00_AfBff9oOqi7U9UPKdfRg_djyx9h7AVPwI9drE_eQQyc6gw&oe=6525C673">
             </div>
             <div class="infor">
                 <p class="hello">Hello, I'm</p>
                 <h1 class="name-infor">Martin Pham</h1>
                 <p class="position">Full-stack devoloper</p>
                 <div class="function">
-                    <a href="https://github.com/phamnguyentruongtin/resume.github.io/blob/main/index.html" class="cv-download">Download cv</a>
+                    <a href="https://github.com/phamnguyentruongtin/resume.github.io/blob/main/index.html"
+                        class="cv-download">Download cv</a>
                     <a href="tel:+84799144145" class="cv-download">Contact</a>
                 </div>
                 <div class="my-social">
@@ -618,8 +720,8 @@
             </div>
             <div class="main-infor">
                 <div class="avatar-main">
-                    <img
-                        src="https://scontent.fdad1-4.fna.fbcdn.net/v/t1.6435-9/120956712_2895758480702856_3733749651576110988_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=r_GMnqxYhwYAX_TrQ5X&_nc_ht=scontent.fdad1-4.fna&oh=00_AfAOOV6bD2G2609NNrlNmsoVbcYan7Z_SGQM3DSAMi0obg&oe=65310739" loading="lazy">
+                    <img src="https://scontent.fdad1-4.fna.fbcdn.net/v/t1.6435-9/120956712_2895758480702856_3733749651576110988_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=r_GMnqxYhwYAX_TrQ5X&_nc_ht=scontent.fdad1-4.fna&oh=00_AfAOOV6bD2G2609NNrlNmsoVbcYan7Z_SGQM3DSAMi0obg&oe=65310739"
+                        loading="lazy">
                 </div>
                 <div class="statament">
                     <div class="form">
